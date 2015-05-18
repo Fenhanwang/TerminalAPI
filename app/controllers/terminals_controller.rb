@@ -5,6 +5,17 @@ class TerminalsController < ApplicationController
   # GET /terminals.json
   def index
     @terminals = Terminal.all
+    respond_to do |format|
+      if request.format.symbol == :json
+        format.json
+      elsif request.format.symbol == :xml
+        format.xml
+      else
+        format.html
+        format.json
+        format.xml
+      end    
+    end
   end
 
   # GET /terminals/1
@@ -69,6 +80,6 @@ class TerminalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def terminal_params
-      params.require(:terminal).permit(:name, :description, :attributes)
+      params.require(:terminal).permit(:name, :description, :attributes_of_terminals)
     end
 end
