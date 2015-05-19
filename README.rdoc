@@ -22,7 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * Improvement 
-	1. We can use the gem called rails-api to set up the api environment
+	<p>1. We can use the gem called rails-api to set up the api environment</p>
 	2. JWT(Json Web Token) authentication can be added so that the API can achiev authentication functions
 
 
