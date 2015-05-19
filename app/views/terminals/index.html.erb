@@ -17,7 +17,18 @@
       <tr>
         <td><%= terminal.name %></td>
         <td><%= terminal.description %></td>
-        <td><%= terminal.attributes %></td>
+        <td>
+          <table>
+            <tr>
+              <th>att_name</th>
+              <th>att_time</th>
+            </tr>
+            <tr>
+              <td><%= terminal.attributes_of_terminals["att_name"] %></td>
+              <td><%= terminal.attributes_of_terminals["att_time"] %></td>
+            </tr>
+          </table>
+        </td>
         <td><%= link_to 'Show', terminal %></td>
         <td><%= link_to 'Edit', edit_terminal_path(terminal) %></td>
         <td><%= link_to 'Destroy', terminal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

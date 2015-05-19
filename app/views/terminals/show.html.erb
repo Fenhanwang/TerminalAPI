@@ -11,8 +11,13 @@
 </p>
 
 <p>
-  <strong>Attributes:</strong>
-  <%= @terminal.attributes %>
+  <strong>Attributes_att_name:</strong>
+  <%= @terminal.attributes_of_terminals["att_name"] %>
+</p>
+
+<p>
+  <strong>Attributes_att_time:</strong>
+  <%= @terminal.attributes_of_terminals["att_time"] %>
 </p>
 
 <%= link_to 'Edit', edit_terminal_path(@terminal) %> |

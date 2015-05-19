@@ -1,27 +1,67 @@
-== README
+= README by Fenhan
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+== Ruby version
 
-* System dependencies
+    <b>Ruby 2.1.5</b>
 
-* Configuration
+== Rails version
 
-* Database creation
+	<b>Rails 4.2.0</b>
+	
+== Configuration:
 
-* Database initialization
+1.Use git clone to download the project to local.
 
-* How to run the test suite
+2.cd into the project and run <b>bundle install</b> to install necessary gems.
 
-* Services (job queues, cache servers, search engines, etc.)
+== Database creation
 
-* Deployment instructions
+1.There is no need to run <b>rake db:create</b> and <b>rake db:schema:load</b>, because I upload the database into github. 
 
-* ...
+This way is not a good way, Just for demo purpose.
+
+== Database initialization
+
+1.There are already dates there and you don't need to initializaton it.
+
+2.For the furture design, we can use gems called populator and faker to populate test data.
+
+
+== How to run the test suite
+
+1. Under the project folder, start rails server in test environment by running <b>rails s -e test -b 0.0.0.0</b>.
+
+2. Open a new tab in the terminal window and run <b>cucumber features</b>.
+
+3. You will see <b>19 steps passed</b> in green word
+
+4. You can find the Scenario in <b>TerminalAPI/features</b> and you can find the step definitions in <b>TerminalAPI/features/step_definitons</b>.
+
+
+== Services (job queues, cache servers, search engines, etc.)
+
+1. To start rails server, just run <b>rails s -b 0.0.0.0</b>
+
+2. Go to Brow
+
+== Deployment instructions
+
+1. You can use Capistrano to deploy the application on server side.
+
+== Improvement
+
+1. We can use the gem called rails-api to set up the api environment.
+
+2. JWT(Json Web Token) authentication can be added so that the API can achiev authentication functions.
+
+3. We can also use Redis as the caching sever so that the query performance can be imporved.
+
+4. We can use Twitter bootstrap and Angular js to improve the front end view
 
 
 Please feel free to use a different markup language if you do not plan to run
