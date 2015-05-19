@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label 'Att Name' %><br>
-    <textarea name="terminal[attributes_of_terminals][att_name]" id="terminal_attributes_of_terminals_att_name"><%= @terminal.attributes_of_terminals["att_name"] %></textarea>
+    <textarea name="terminal[attributes_of_terminals][att_name]" id="terminal_attributes_of_terminals_att_name"><%= @terminal.attributes_of_terminals ? @terminal.attributes_of_terminals["att_name"] : "" %></textarea>
   </div>
   <div class="field">
     <%= f.label 'Att Time' %><br>
-    <textarea name="terminal[attributes_of_terminals][att_time]" id="terminal_attributes_of_terminals_att_time"><%= @terminal.attributes_of_terminals["att_time"] %></textarea>
+    <textarea name="terminal[attributes_of_terminals][att_time]" id="terminal_attributes_of_terminals_att_time"><%= @terminal.attributes_of_terminals ? @terminal.attributes_of_terminals["att_time"] : "" %></textarea>
   </div>
   <div class="actions">
     <%= f.submit %>
