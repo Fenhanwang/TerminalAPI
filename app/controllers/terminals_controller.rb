@@ -10,11 +10,11 @@ class TerminalsController < ApplicationController
       if request.format.symbol == :json
         format.json { render json: @terminals.to_json }
       elsif request.format.symbol == :xml
-        format.xml
+        format.xml  { render xml: @terminals.to_xml }
       else
         format.html
         format.json { render json: @terminals.to_json }
-        format.xml
+        format.xml  { render xml: @terminals.to_xml }
       end    
     end
   end
@@ -22,6 +22,18 @@ class TerminalsController < ApplicationController
   # GET /terminals/1
   # GET /terminals/1.json
   def show
+    @terminal = Terminal.find(params[:id])
+    respond_to do |format|
+      if request.format.symbol == :json
+        format.json { render json: @terminal.to_json }
+      elsif request.format.symbol == :xml
+        format.xml { render xml: @terminal.to_xml }
+      else
+        format.html
+        format.json { render json: @terminal.to_json }
+        format.xml  { render xml: @terminal.to_xml }
+      end    
+    end
   end
 
   # GET /terminals/new
