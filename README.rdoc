@@ -17,11 +17,11 @@ Things you may want to cover:
 
 1.Use git clone to download the project to local.
 
-2.cd into the project and run bundle install to install necessary gems.
+2.cd into the project and run <b>bundle install</b> to install necessary gems.
 
 == Database creation
 
-1.There is no need to run rake db:create and rake db:schema:load, because I upload the database into github. 
+1.There is no need to run <b>rake db:create</b> and <b>rake db:schema:load</b>, because I upload the database into github. 
 
 This way is not a good way, Just for demo purpose.
 
@@ -38,14 +38,14 @@ This way is not a good way, Just for demo purpose.
 
 2. Open a new tab in the terminal window and run <b>cucumber features</b>.
 
-3. You will see 19 steps passed in green word
+3. You will see <b>19 steps passed</b> in green word
 
-4. You can find the Scenario in TerminalAPI/features and you can find the step definitions in TerminalAPI/features/step_definitons.
+4. You can find the Scenario in <b>TerminalAPI/features</b> and you can find the step definitions in <b>TerminalAPI/features/step_definitons</b>.
 
 
 == Services (job queues, cache servers, search engines, etc.)
 
-1. To start rails server, just run rails s -b 0.0.0.0
+1. To start rails server, just run <b>rails s -b 0.0.0.0</b>
 
 == Deployment instructions
 
@@ -62,4 +62,3 @@ This way is not a good way, Just for demo purpose.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
-# Fenhan
