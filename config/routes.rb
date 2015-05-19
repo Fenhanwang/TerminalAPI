@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  root 'terminals#index'
   scope 'api' do
-    root 'terminals#index'
     resources :terminals
   end
 end

@@ -47,6 +47,8 @@ This way is not a good way, Just for demo purpose.
 
 1. To start rails server, just run <b>rails s -b 0.0.0.0</b>
 
+2. Go to Brow
+
 == Deployment instructions
 
 1. You can use Capistrano to deploy the application on server side.
@@ -58,6 +60,8 @@ This way is not a good way, Just for demo purpose.
 2. JWT(Json Web Token) authentication can be added so that the API can achiev authentication functions.
 
 3. We can also use Redis as the caching sever so that the query performance can be imporved.
+
+4. We can use Twitter bootstrap and Angular js to improve the front end view
 
 
 Please feel free to use a different markup language if you do not plan to run
