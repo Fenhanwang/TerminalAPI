@@ -4,15 +4,16 @@ class TerminalsController < ApplicationController
   # GET /terminals
   # GET /terminals.json
   def index
+    # byebug
     @terminals = Terminal.all
     respond_to do |format|
       if request.format.symbol == :json
-        format.json
+        format.json { render json: @terminals.to_json }
       elsif request.format.symbol == :xml
         format.xml
       else
         format.html
-        format.json
+        format.json { render json: @terminals.to_json }
         format.xml
       end    
     end
