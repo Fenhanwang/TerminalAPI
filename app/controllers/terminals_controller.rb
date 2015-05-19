@@ -53,7 +53,7 @@ class TerminalsController < ApplicationController
     respond_to do |format|
       if @terminal.save
         format.html { redirect_to @terminal, notice: 'Terminal was successfully created.' }
-        format.json { render :show, status: :created, location: @terminal }
+        format.json { render json: @terminal }
       else
         format.html { render :new }
         format.json { render json: @terminal.errors, status: :unprocessable_entity }
@@ -93,6 +93,8 @@ class TerminalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def terminal_params
+      # all_options = params.require(:terminal).fetch(:attributes_of_terminals, nil).try(:permit!)
+      # params.require(:terminal).permit(:id, :name, :description).merge(:attributes_of_terminals => :att_name).merge(:attributes_of_terminals => :att_time)
       params.require(:terminal).permit(:name, :description, :attributes_of_terminals)
     end
 end

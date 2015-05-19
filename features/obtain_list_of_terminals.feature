@@ -1,6 +1,6 @@
 Feature: Terminal list
   In order to use terminal API easily
-  I need some different terminals.
+  I need to see some different terminals.
   
   Scenario: List terminals
     Given the system knows about the following terminals:
