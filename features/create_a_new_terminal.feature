@@ -2,7 +2,7 @@ Feature: Create a New Terminal
   In order to use terminal API easily
   I should have ability to create a new terminal from client side.
   
-  Scenario: Show one Terminal
+  Scenario: Create a new Terminal
     Given the system knows about the following terminals:
       | name       | description       | attributes_of_terminals                          |
       | test1      | chrome_terminal   | {"att_name"=>"test1", "att_time"=>"05-12-2015"}  | 
