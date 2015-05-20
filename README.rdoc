@@ -42,6 +42,8 @@ This way is not a good way, Just for demo purpose.
 
 4. You can find the Scenario in <b>TerminalAPI/features</b> and you can find the step definitions in <b>TerminalAPI/features/step_definitons</b>.
 
+5. The test suite is written by cucumber
+
 
 == Services (job queues, cache servers, search engines, etc.)
 

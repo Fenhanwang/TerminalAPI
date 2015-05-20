@@ -4,7 +4,6 @@ class TerminalsController < ApplicationController
   # GET /terminals
   # GET /terminals.json
   def index
-    # byebug
     @terminals = Terminal.all
     respond_to do |format|
       if request.format.symbol == :json
