@@ -93,8 +93,11 @@ class TerminalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def terminal_params
-      all_options = params.require(:terminal).fetch(:attributes_of_terminals, nil).try(:permit!)
-      params.require(:terminal).permit(:id, :name, :description).merge(:attributes_of_terminals => all_options)
-      # params.require(:terminal).permit(:name, :description, :attributes_of_terminals)
+      if request.format.symbol == :json || request.format.symbol == :xml
+        params.require(:terminal).permit(:name, :description, :attributes_of_terminals)
+      else
+        all_options = params.require(:terminal).fetch(:attributes_of_terminals, nil).try(:permit!)
+        params.require(:terminal).permit(:id, :name, :description).merge(:attributes_of_terminals => all_options)
+      end
     end
 end

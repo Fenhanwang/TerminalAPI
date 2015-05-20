@@ -9,6 +9,7 @@ Given(/^the system knows about the following terminals:$/) do |table|
 end
 
 Given(/^the client want to create a new terminals:$/) do |table|
+
   @new_terminal = table.hashes
   # puts @new_terminal[0]["attributes_of_terminals"]
 end
